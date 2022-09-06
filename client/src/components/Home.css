@@ -1,0 +1,11 @@
+.home {
+    border: 2px black solid;
+    padding: 5px;
+    width: 700px;
+    margin: auto;
+}
+.aboutTradeView {
+    text-align: left;
+    margin: 10px;
+    text-decoration: underline;
+}

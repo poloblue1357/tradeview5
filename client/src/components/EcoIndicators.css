@@ -1,0 +1,21 @@
+.EcoIndicators {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+.CPI {
+    grid-column: 0 / 1 ;
+    grid-row: 0 / 1;
+    justify-self: center;
+}
+.Inflation {
+    grid-column: 2 / 3;
+    grid-row: 0 / 1;
+    justify-self: center;
+}
+.TreasuryYield {
+    grid-column: 3 / 4;
+    grid-row: 0 / 1;
+    justify-self: center;
+}
