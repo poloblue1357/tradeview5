@@ -26,7 +26,8 @@ app.use(express.static(path.join(__dirname, "client", "build")));
 //         useFindAndModify: false
 //     },
 //         () => console.log("Connected to the database.")
-// )
+// ) 
+// testing updates
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 app.use("/watchlist", require("./routes/stockRouter.js"))
