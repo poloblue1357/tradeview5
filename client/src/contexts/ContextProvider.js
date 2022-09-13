@@ -31,7 +31,7 @@ const StockContextProvider = (props) => {
             axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
                     // console.log("time series daily")
-                    console.log(response.data)
+                    // console.log(response.data)
                     const data = response.data["Time Series (Daily)"]
                     setStockData(data)
                     setIsLoadingSD(true)
@@ -45,7 +45,7 @@ const StockContextProvider = (props) => {
         return (
             axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
-                    console.log(response.data)
+                    // console.log(response.data)
                     setCompanyName(response.data)
                     setIsLoadingCN(true)
                     // console.log("Company Name is finished")
@@ -56,7 +56,7 @@ const StockContextProvider = (props) => {
         return (
             axios.get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
-                    console.log(response.data)
+                    // console.log(response.data)
                     setCompanyInfo(response.data)
                     setIsLoadingCI(true)
                     // console.log("Company Info is finished")
@@ -64,35 +64,35 @@ const StockContextProvider = (props) => {
             })
         )
     }
-    const [CPIarray, setCPIArray] = useState([])
-    useEffect(() => {
-        axios.get("https://www.alphavantage.co/query?function=CPI&interval=monthly&apikey=HOEHM6SOJN8NYJWX" )
-            .then(response => {
-                // console.log(response.data)
-                setCPIArray(response.data.data)
-            })
-    }, [])
-    const [INFarray, setINFArray] = useState([])
-    useEffect(() => {
-        axios.get("https://www.alphavantage.co/query?function=INFLATION&apikey=HOEHM6SOJN8NYJWX" )
-            .then(response => {
-                // console.log(response.data)
-                setINFArray(response.data.data)
-            })
-    },[])
-    const [TYarray, setTYArray] = useState([])
-    useEffect(() => {
-        axios.get("https://www.alphavantage.co/query?function=TREASURY_YIELD&interval=monthly&maturity=10year&apikey=HOEHM6SOJN8NYJWX" )
-            .then(response => {
-                // console.log(response.data)
-                setTYArray(response.data.data)
-            })
-    },[])
+    // const [CPIarray, setCPIArray] = useState([])
+    // useEffect(() => {
+    //     axios.get("https://www.alphavantage.co/query?function=CPI&interval=monthly&apikey=HOEHM6SOJN8NYJWX" )
+    //         .then(response => {
+    //             // console.log(response.data)
+    //             setCPIArray(response.data.data)
+    //         })
+    // }, [])
+    // const [INFarray, setINFArray] = useState([])
+    // useEffect(() => {
+    //     axios.get("https://www.alphavantage.co/query?function=INFLATION&apikey=HOEHM6SOJN8NYJWX" )
+    //         .then(response => {
+    //             // console.log(response.data)
+    //             setINFArray(response.data.data)
+    //         })
+    // },[])
+    // const [TYarray, setTYArray] = useState([])
+    // useEffect(() => {
+    //     axios.get("https://www.alphavantage.co/query?function=TREASURY_YIELD&interval=monthly&maturity=10year&apikey=HOEHM6SOJN8NYJWX" )
+    //         .then(response => {
+    //             // console.log(response.data)
+    //             setTYArray(response.data.data)
+    //         })
+    // },[])
     const [watchlist, setWatchlist] = useState([])
     useEffect(() => {
         axios.get("/watchlist")
             .then(response => {
-                console.log(response.data)
+                // console.log(response.data)
                 setWatchlist(response.data)
             })
     }, [])
@@ -193,9 +193,7 @@ const StockContextProvider = (props) => {
             addToWatchlist,
             tickersForWatchlist,
             deleteStockFromWatchlist,
-            INFarray,
-            CPIarray,
-            TYarray,
+
         }}>
             {props.children}
         </StockContext.Provider>
@@ -203,3 +201,7 @@ const StockContextProvider = (props) => {
 }
 
 export { StockContext, StockContextProvider }
+
+// INFarray,
+// CPIarray,
+// TYarray,
