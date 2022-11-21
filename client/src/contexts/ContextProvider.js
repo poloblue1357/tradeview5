@@ -28,7 +28,7 @@ const StockContextProvider = (props) => {
 
     const tickerData = () => {
         return (
-            axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
+            axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
                     // console.log("time series daily")
                     // console.log(response.data)
@@ -141,7 +141,7 @@ const StockContextProvider = (props) => {
 
     const sdArray = []
     // const ciArray = []
-    const forEachSD = (isLoadingSD && Object?.entries(stockData).forEach(([key, val]) => {
+    const forEachSD = (isLoadingSD && Object?.entries(stockData)?.forEach(([key, val]) => {
         return (
             sdArray.push([key, val])
         )
