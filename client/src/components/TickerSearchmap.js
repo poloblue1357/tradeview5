@@ -19,9 +19,9 @@ function TickerSearchmap(props) {
                 <input placeholder="Ticker Symbol" type="text" name="ticker" value={context.ticker.ticker} onChange={context.handleChange}/>
                 <button type="submit">Search</button>
             </form>
-            <h1 style={{color: "red"}}>Company: {context.name}</h1>
-            <h1 style={{color: "blue"}}>Ticker Symbol: {context.symbol}</h1>
-            <div style={{display: "flex", justifyContent: "space-around", color: "purple"}}>
+            <h1 style={{color: "#e06666"}}>Company: {context.name}</h1>
+            <h1 style={{color: "#6fa8dc"}}>Ticker Symbol: {context.symbol}</h1>
+            <div style={{display: "flex", justifyContent: "space-around", color: "#8e7cc3"}}>
                 <h2>52 Week High: {context.high}</h2>
                 <h2>52 Week Low: {context.low}</h2>
                 <h2>Fiscal Year End: {context.yearEnd}</h2>

@@ -11,7 +11,7 @@ function TickerSearch(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}> 
+                backgroundColor: "#d9ead3"}}> 
                 
                 Date: {props?.x[0]}
                 
@@ -22,7 +22,7 @@ function TickerSearch(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}> 
+                backgroundColor: "#d9ead3"}}> 
                 
                 Open: {Math.round(props.x[1]["1. open"])}
 
@@ -33,7 +33,7 @@ function TickerSearch(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}> 
+                backgroundColor: "#d9ead3"}}> 
 
                 High: {Math.round(props.x[1]["2. high"])}
 
@@ -44,7 +44,7 @@ function TickerSearch(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}> 
+                backgroundColor: "#d9ead3"}}> 
 
                 Low: {Math.round(props.x[1]["3. low"])}
 
@@ -55,7 +55,7 @@ function TickerSearch(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}> 
+                backgroundColor: "#d9ead3"}}> 
 
                 Close: {Math.round(props.x[1]["4. close"])}
 
@@ -66,7 +66,7 @@ function TickerSearch(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}> 
+                backgroundColor: "#d9ead3"}}> 
 
                 Volume: {props.x[1]["6. volume"]}
 

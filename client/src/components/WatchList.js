@@ -11,7 +11,7 @@ function WatchList(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}>
+                backgroundColor: "#d9ead3"}}>
                 
                 Ticker: {props.stock["Global Quote"]["01"][" symbol"]}
                 
@@ -22,7 +22,7 @@ function WatchList(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}>
+                backgroundColor: "#d9ead3"}}>
                 
                 Open: {(props.stock["Global Quote"]["02"][" open"]) * 100 / 100}
                 
@@ -33,7 +33,7 @@ function WatchList(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}>
+                backgroundColor: "#d9ead3"}}>
                 
                 Close: {(props.stock["Global Quote"]["05"][" price"]) * 100 / 100}
                 
@@ -44,7 +44,7 @@ function WatchList(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}>
+                backgroundColor: "#d9ead3"}}>
                 
                 Previous Close: {(props.stock["Global Quote"]["08"][" previous close"]) * 100 / 100}
                 
@@ -55,7 +55,7 @@ function WatchList(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}>
+                backgroundColor: "#d9ead3"}}>
                 
                 Change: {(props.stock["Global Quote"]["09"][" change"]) * 1000 / 1000}
                 
@@ -66,7 +66,7 @@ function WatchList(props) {
                 height: "30px",
                 maxWidth: "160px",
                 width: "160px", 
-                backgroundColor: "palevioletred"}}>
+                backgroundColor: "#d9ead3"}}>
                 
                 Percent Change: {props.stock["Global Quote"]["10"][" change percent"]}</td>
             <td><button style={{padding: "10px", fontSize: "16px", backgroundColor: "lightblue"}} onClick={() => context.deleteStockFromWatchlist(props.stock._id)}>
