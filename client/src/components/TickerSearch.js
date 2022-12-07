@@ -3,6 +3,7 @@ import React from "react"
 function TickerSearch(props) {
     // const INFvalue = Math.round(props.thing.value * 1000) / 1000
     // console.log(props.x)
+    // for upload
     return (
           <tr>
             <td style={{
@@ -76,3 +77,4 @@ function TickerSearch(props) {
 }
 
 export default TickerSearch
+
