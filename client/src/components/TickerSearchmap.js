@@ -6,6 +6,7 @@ function TickerSearchmap(props) {
     const context = useContext(StockContext)
     function twoFunctions() {
         return (
+            alert("Added to Watchlist"),
             context.addToWatchlist()
         )
     }
