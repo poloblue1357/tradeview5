@@ -69,7 +69,7 @@ function TickerSearch(props) {
                 width: "160px", 
                 backgroundColor: "#d9ead3"}}> 
 
-                Volume: {props.x[1]["6. volume"]}
+                Volume: {props.x[1]["5. volume"]}
 
             </td>
         </tr>

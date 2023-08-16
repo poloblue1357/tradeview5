@@ -28,14 +28,14 @@ const StockContextProvider = (props) => {
 
     const tickerData = () => {
         return (
-            axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
+            axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
                     // console.log("time series daily")
-                    // console.log(response.data)
+                    console.log(response.data)
                     const data = response.data["Time Series (Daily)"]
                     setStockData(data)
                     setIsLoadingSD(true)
-                    // console.log(data)
+                    console.log(data)
                     // const tSymbol = response.data["Meta Data"]
                     // setTickerOnly(tSymbol)
             })
@@ -45,7 +45,7 @@ const StockContextProvider = (props) => {
         return (
             axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
-                    // console.log(response.data)
+                    console.log(response.data)
                     setCompanyName(response.data)
                     setIsLoadingCN(true)
                     // console.log("Company Name is finished")
@@ -56,7 +56,7 @@ const StockContextProvider = (props) => {
         return (
             axios.get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker.ticker}&apikey=HOEHM6SOJN8NYJWX` )
                 .then(response => {
-                    // console.log(response.data)
+                    console.log(response.data)
                     setCompanyInfo(response.data)
                     setIsLoadingCI(true)
                     // console.log("Company Info is finished")
